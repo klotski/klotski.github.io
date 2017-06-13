@@ -1,13 +1,7 @@
 ---
 layout: post
 title: Special Pronunciation
-published: 
-description: 
-category: blog
-tag: 
 ---
-
-[TITLE]
 
 [GUI][]
 :    The **Graphical User Interface** (GUI /ɡuːiː/), is a type of user interface that allows users to interact with electronic devices through graphical icons and visual indicators such as secondary notation, instead of text-based user interfaces, typed command labels or text navigation.
