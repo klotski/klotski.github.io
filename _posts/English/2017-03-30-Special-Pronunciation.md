@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Special Pronunciation
+categories: English
 ---
 
 [GUI][]
