@@ -23,7 +23,7 @@ exit
 
 **Methond 3** Terminate current bash process
 
-```shell
+```bash
 kill -9 $$
 ```
 
