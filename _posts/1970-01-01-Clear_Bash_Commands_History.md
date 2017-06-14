@@ -8,20 +8,20 @@ Once you have logged out of your shell by default bash will store the last comma
 
 ### Quit bash shell without saving current history
 
-**Clear current history stored in RAM and then exit**
+**Methond 1** Clear current history stored in RAM and then exit
 
 ```shell
 history -c && exit
 ```
 
-**Unset HISTFILE then exit**
+**Methond 2** Unset HISTFILE then exit
 
 ```shell
 unset HISTFILE
 exit
 ```
 
-**Terminate current bash process**
+**Methond 3** Terminate current bash process
 
 ```shell
 kill -9 $$
@@ -31,14 +31,16 @@ If you want make these commands more permanent then these commands could be adde
 
 ### Clear bash history completely
 
-**Remove ~./bash_history file, then clear current history and exit**
+Remove ~./bash_history file, then clear current history and exit
 
-```shell
+```
 rm -rf ~/.bash_history
 history -c && exit
 ```
 
 ### Send .bash_history to a black hole
+
+Remove ./bash_history file, then create a soft link redirecting to /dev/null.
 
 ```shell
 rm -rf ~/.bash_history
