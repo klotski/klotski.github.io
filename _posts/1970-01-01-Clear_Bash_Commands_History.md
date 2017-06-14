@@ -33,14 +33,14 @@ If you want make these commands more permanent then these commands could be adde
 
 Remove ~./bash_history file, then clear current history and exit
 
-```
+```sh
 rm -rf ~/.bash_history
 history -c && exit
 ```
 
 ### Send .bash_history to a black hole
 
-Remove ./bash_history file, then create a soft link redirecting to /dev/null.
+Remove .bash_history file, then create a soft link redirecting to /dev/null.
 
 ```shell
 rm -rf ~/.bash_history
