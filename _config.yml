@@ -1,13 +1,13 @@
 # Setup
-title:        Project or Site name
-tagline:      A responsive theme for your project on GitHub Pages
+title:        Klotski's Blog
+tagline:      We are in a f**king corrupted world, unfortunately.
 baseurl:      ""
 paginate:     1
 
 # About/contact
-author:
-  name:       Author name
-  url:        http://yourhomepage.com 
+author:       
+  name:       Klotski
+  url:        https://klotski.github.io/
 
 # Gems
 gems:
