@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: How to Start Learning Programming
 categories: MOOC
 ---
