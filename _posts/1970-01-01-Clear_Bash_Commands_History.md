@@ -47,6 +47,6 @@ rm -rf ~/.bash_history
 ln -s /dev/null ~/.bash_history
 ```
 
-**See also:**
+**References:**
 - [Quit Bash Shell Without Saving Bash History (5 Methods)](https://www.if-not-true-then-false.com/2010/quit-bash-shell-without-saving-bash-history/)
 - [Disabling Bash_History and/or Logging All User's CMDS](http://mewbies.com/how_to_disable_bash_history_or_limit_tutorial.html)
