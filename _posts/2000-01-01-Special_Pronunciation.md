@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Special Pronunciation
-categories: English
+category: English
 ---
 
 #### [GUI][]

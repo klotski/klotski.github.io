@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Clear Bash Commands History"
+title: Clear Bash Commands History
 category: Linux
 ---
 
