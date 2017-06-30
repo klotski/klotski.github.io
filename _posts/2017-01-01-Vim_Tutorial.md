@@ -6,8 +6,7 @@ category: Vim
 
 **IMPORTANT**
 
-The best way to find helpful materials is to access [documentation hosted on the official website](http://www.vim.org/docs.php).
-
+The best way to find out helpful materials is to access [documentation hosted on the official website](http://www.vim.org/docs.php).
 The following is for personal use, I do not guarantee the accuracy, integrity and authority. 
 
 ### Help Files
@@ -23,7 +22,7 @@ The following is for personal use, I do not guarantee the accuracy, integrity an
 
 See also:
 
-[](http://iccf-holland.org/click5.html)
+- [http://iccf-holland.org/click5.html](http://iccf-holland.org/click5.html)
 
 ### Game
 
@@ -31,23 +30,37 @@ See also:
 
 ### Vim Tutor
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #### 1.1: STARTING VIM
 
-  To start Vim from the shell prompt type:  vim FILENAME <ENTER>
+To start Vim from the shell prompt type:  
+
+    ```
+    vim FILENAME <ENTER>
+    ```
 
 #### 1.2: MOVING THE CURSOR
 
-  The cursor is moved using either the arrow keys or the hjkl keys.
-	 h (left)	j (down)       k (up)	    l (right)
+  The cursor is moved using the hjkl keys.
+
+    ```
+    h (left)	j (down)       k (up)	    l (right)
+    ```
 
 #### 1.3: TEXT EDITING - DELETION
 
-  To delete the character at the cursor type:  x
+   To delete the character at the cursor type:
+
+    ```
+    x
+    ```
 
 #### 1.4: TEXT EDITING - INSERTION
 
-  To insert text type: i   type inserted text   <ESC>		insert before the cursor
+  To insert text type: 
+    ```
+    i text <ESC>
+    ```
+   insert before the cursor.
 
 #### 1.5: TEXT EDITING - APPENDING
 
@@ -55,13 +68,13 @@ See also:
 
 #### 1.6: EDITING A FILE OR EXITING VIM
 
-
   type:	   <ESC>   :q!	 <ENTER>  to trash all changes.
   type:	   <ESC>   :wq	 <ENTER>  to save the changes.
 
   NOTE: Pressing <ESC> will place you in Normal mode or will cancel
         an unwanted and partially completed command.
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #### 2.1: DELETION COMMANDS
 
   To delete from the cursor up to the next word type:    dw
