@@ -187,8 +187,8 @@ NOTE: This is very useful in debugging a program with unmatched parentheses!
 Some useful examples are:
 
     (MS-DOS)		(Unix)
-     :!dir		 :!ls			-  shows a directory listing.
-     :!del FILENAME	 :!rm FILENAME		-  removes file FILENAME.
+    :!dir			:!ls			-  shows a directory listing.
+    :!del FILENAME		:!rm FILENAME		-  removes file FILENAME.
 
 NOTE: All `:` commands must be finished by hitting `<ENTER>`. From here on we will not always mention it.
 
@@ -257,7 +257,7 @@ Vim has many more features than Vi, but most of them are disabled by default. To
 
 Step1 - Start editing the "vimrc" file. This depends on your system:
 
-    :e ~/.vimrc			(for Unix)
+    :e ~/.vimrc		(for Unix)
     :e $VIM/_vimrc		(for MS-Windows)
 
 Step 2 - Now read the example "vimrc" file contents:
