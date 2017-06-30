@@ -221,13 +221,13 @@ NOTE: `a`, `i` and `A` all go to the same Insert mode, the only difference is wh
 
 #### 6.3 ANOTHER WAY TO REPLACE
 
-- Typing a capital `R` enters Replace mode until `<ESC>` is pressed.
+Typing a capital `R` enters Replace mode until `<ESC>` is pressed.
 
 NOTE: Replace mode is like Insert mode, but every typed character deletes an existing character.
 
 #### 6.4 COPY AND PASTE TEXT
 
-- The `y` operator yanks (copies) text, `p` puts (pastes) it.
+The `y` operator yanks (copies) text, `p` puts (pastes) it.
 
 NOTE: you can also use `y` as an operator; `yw` yanks one word.
 
@@ -255,23 +255,18 @@ NOTE: If you want to ignore case for just one search command, use "\c" in the ph
 
 Vim has many more features than Vi, but most of them are disabled by default. To start using more features you have to create a "vimrc" file.
 
-1. Start editing the "vimrc" file. This depends on your system:
+Step1 - Start editing the "vimrc" file. This depends on your system:
 
-```
-:e ~/.vimrc		(for Unix)
-:e $VIM/_vimrc		(for MS-Windows)
-```
+    :e ~/.vimrc			(for Unix)
+    :e $VIM/_vimrc		(for MS-Windows)
 
-2. Now read the example "vimrc" file contents:
+Step 2 - Now read the example "vimrc" file contents:
 
-```
-:r $VIMRUNTIME/vimrc_example.vim
-```
-3. Write the file with:
+    :r $VIMRUNTIME/vimrc_example.vim
 
-```
-:w
-```
+Step 3 - Write the file with:
+
+    :w
 
 The next time you start Vim it will use syntax highlighting. You can add all your preferred settings to this "vimrc" file. For more information type `:help vimrc-intro`
 
