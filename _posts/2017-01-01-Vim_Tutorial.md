@@ -1,10 +1,18 @@
-**HIGHLY RECOMMENDATION**
-The best way to find helpful materials is to access [the documentation hosted on the official website](http://www.vim.org/docs.php).
+---
+layout: default
+title: Vim Tutorial
+category: Vim
+---
+
+**IMPORTANT**
+
+The best way to find helpful materials is to access [documentation hosted on the official website](http://www.vim.org/docs.php).
+
 The following is for personal use, I do not guarantee the accuracy, integrity and authority. 
 
 ### Help Files
 
-- Vim Tutor: `vimtutor`
+- [Vim Tutor](http://vimhelp.appspot.com/usr_01.txt.html#vimtutor)
 - [Help Overview](http://vimhelp.appspot.com/)
 - [Translations](http://vimcdoc.sourceforge.net/)
 
@@ -13,14 +21,13 @@ The following is for personal use, I do not guarantee the accuracy, integrity an
 - *Vi IMproved - Vim*, by Steve Oualline
 - *Practical Vim 2nd ed.*, by Drew Neil
 
-**See also:**
+See also:
 
-http://iccf-holland.org/click5.html
+[](http://iccf-holland.org/click5.html)
 
 ### Game
 
-- [Vim Adventure]: https://vim-adventures.com/
-
+- [Vim Adventure](https://vim-adventures.com/)
 
 ### Vim Tutor
 
@@ -34,19 +41,19 @@ http://iccf-holland.org/click5.html
   The cursor is moved using either the arrow keys or the hjkl keys.
 	 h (left)	j (down)       k (up)	    l (right)
 
-##### 1.3: TEXT EDITING - DELETION
+#### 1.3: TEXT EDITING - DELETION
 
   To delete the character at the cursor type:  x
 
-##### 1.4: TEXT EDITING - INSERTION
+#### 1.4: TEXT EDITING - INSERTION
 
   To insert text type: i   type inserted text   <ESC>		insert before the cursor
 
-##### 1.5: TEXT EDITING - APPENDING
+#### 1.5: TEXT EDITING - APPENDING
 
   To append text type: A   type appended text   <ESC>         append after the line
 
-##### 1.6: EDITING A FILE OR EXITING VIM
+#### 1.6: EDITING A FILE OR EXITING VIM
 
 
   type:	   <ESC>   :q!	 <ENTER>  to trash all changes.
@@ -55,8 +62,7 @@ http://iccf-holland.org/click5.html
   NOTE: Pressing <ESC> will place you in Normal mode or will cancel
         an unwanted and partially completed command.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##### 2.1: DELETION COMMANDS
+#### 2.1: DELETION COMMANDS
 
   To delete from the cursor up to the next word type:    dw
 
@@ -64,7 +70,7 @@ http://iccf-holland.org/click5.html
 
   To delete a whole line type:    dd
 
-##### 2.2: ON OPERATORS AND MOTIONS
+#### 2.2: ON OPERATORS AND MOTIONS
 
   To repeat a motion prepend it with a number:   2w
 
@@ -89,25 +95,24 @@ http://iccf-holland.org/click5.html
          move the cursor as specified.
 
 
-##### 2.3: THE UNDO COMMAND
+#### 2.3: THE UNDO COMMAND
 
   To undo previous actions, type: 	       u  (lowercase u)
   To undo all the changes on a line, type:     U  (capital U)
   To undo the undo's, type:		       CTRL-R
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##### 3.1: THE PUT COMMAND
+#### 3.1: THE PUT COMMAND
 
   To put back text that has just been deleted, type   p .  This puts the
   deleted text AFTER the cursor (if a line was deleted it will go on the
   line below the cursor).
 
-##### 3.2: THE REPLACE COMMAND
+#### 3.2: THE REPLACE COMMAND
 
   To replace the character under the cursor, type   r   and then the
   character you want to have there.
 
-##### 3.3: THE CHANGE OPERATOR
+#### 3.3: THE CHANGE OPERATOR
 
   The change operator allows you to change from the cursor to where the
   motion takes you.  eg. Type  ce  to change from the cursor to the end of
@@ -115,7 +120,7 @@ http://iccf-holland.org/click5.html
 
   Notice that  ce  deletes the word and places you in Insert mode.
 
-##### 3.4: MORE CHANGES USING c
+#### 3.4: MORE CHANGES USING c
  
   The format for change is:
 
@@ -123,8 +128,7 @@ http://iccf-holland.org/click5.html
 
   NOTE:  You can use the Backspace key to correct mistakes while typing.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##### 4.1: CURSOR LOCATION AND FILE STATUS
+#### 4.1: CURSOR LOCATION AND FILE STATUS
 
   CTRL-G  displays your location in the file and the file status.
           G  moves to the end of the file.
@@ -134,7 +138,7 @@ http://iccf-holland.org/click5.html
   NOTE:  You may see the cursor position in the lower right corner of the screen
          This happens when the 'ruler' option is set (see  :help 'ruler'  )
 
-##### 4.2: THE SEARCH COMMAND
+#### 4.2: THE SEARCH COMMAND
 
   Typing  /	followed by a phrase searches FORWARD for the phrase.
   Typing  ?	followed by a phrase searches BACKWARD for the phrase.
@@ -145,13 +149,13 @@ http://iccf-holland.org/click5.html
   NOTE: When the search reaches the end of the file it will continue at the
         start, unless the 'wrapscan' option has been reset.
 
-##### 4.3: MATCHING PARENTHESES SEARCH
+#### 4.3: MATCHING PARENTHESES SEARCH
 
   Typing  %	while the cursor is on a (,),[,],{, or } goes to its match.
 
   NOTE: This is very useful in debugging a program with unmatched parentheses!
 
-##### 4.4: THE SUBSTITUTE COMMAND
+#### 4.4: THE SUBSTITUTE COMMAND
 
   To substitute new for the first old in a line type       :s/old/new
   To substitute new for all 'old's on a line type	   :s/old/new/g
@@ -159,9 +163,7 @@ http://iccf-holland.org/click5.html
   To substitute all occurrences in the file type	   :%s/old/new/g
   To ask for confirmation each time add 'c'		   :%s/old/new/gc
 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##### 5.1: HOW TO EXECUTE AN EXTERNAL COMMAND
+#### 5.1: HOW TO EXECUTE AN EXTERNAL COMMAND
 
    :!command  executes an external command.
 
@@ -173,11 +175,11 @@ http://iccf-holland.org/click5.html
    NOTE:  All  :  commands must be finished by hitting <ENTER>
        From here on we will not always mention it.
 
-##### 5.2: MORE ON WRITING FILES
+#### 5.2: MORE ON WRITING FILES
 
    :w FILENAME  writes the current Vim file to disk with name FILENAME.
 
-##### 5.3: SELECTING TEXT TO WRITE
+#### 5.3: SELECTING TEXT TO WRITE
 
    v  motion  :w FILENAME  saves the Visually selected lines in file
    FILENAME.
@@ -186,7 +188,7 @@ http://iccf-holland.org/click5.html
           to make the selection bigger or smaller.  Then you can use an operator
           to do something with the text.  For example,  d  deletes the text.
 
-##### 5.4: RETRIEVING AND MERGING FILES
+#### 5.4: RETRIEVING AND MERGING FILES
 
    :r FILENAME  retrieves disk file FILENAME and puts it below the
       cursor position.
@@ -194,8 +196,7 @@ http://iccf-holland.org/click5.html
    :r !dir  reads the output of the dir command and puts it below the
       cursor position.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##### 6.1: THE OPEN COMMAND
+#### 6.1: THE OPEN COMMAND
 
    Type  o  to open a line BELOW the cursor and start Insert mode.
    Type  O  to open a line ABOVE the cursor.
@@ -208,20 +209,20 @@ http://iccf-holland.org/click5.html
    NOTE:  a, i and A all go to the same Insert mode, the only difference is where
        the characters are inserted.
 
-##### 6.3: ANOTHER WAY TO REPLACE
+#### 6.3: ANOTHER WAY TO REPLACE
 
    Typing a capital  R  enters Replace mode until  <ESC>  is pressed.
 
    NOTE: Replace mode is like Insert mode, but every typed character deletes an
        existing character.
 
-##### 6.4: COPY AND PASTE TEXT
+#### 6.4: COPY AND PASTE TEXT
 
    The  y  operator yanks (copies) text,  p  puts (pastes) it.
 
    NOTE: you can also use  y  as an operator;  yw  yanks one word.
 
-##### 6.5: SET OPTION - Set an option so a search or substitute ignores case
+#### 6.5: SET OPTION - Set an option so a search or substitute ignores case
 
    Typing ":set xxx" sets the option "xxx".  Some options are:
   	'ic' 'ignorecase'	ignore upper/lower case when searching
@@ -234,8 +235,7 @@ http://iccf-holland.org/click5.html
    NOTE:  If you want to ignore case for just one search command, use  \c
        in the phrase:  /ignore\c  <ENTER>
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##### 7.1: GETTING HELP - Use the on-line help system
+#### 7.1: GETTING HELP - Use the on-line help system
 
    1. Type  :help  or press <F1> or <Help>  to open a help window.
 
@@ -245,7 +245,7 @@ http://iccf-holland.org/click5.html
  
    4. Type  :q  to close the help window
 
-##### 7.2: CREATE A STARTUP SCRIPT - Enable Vim features
+#### 7.2: CREATE A STARTUP SCRIPT - Enable Vim features
 
    Vim has many more features than Vi, but most of them are disabled by
    default.  To start using more features you have to create a "vimrc" file.
@@ -264,10 +264,11 @@ http://iccf-holland.org/click5.html
    You can add all your preferred settings to this "vimrc" file.
    For more information type  :help vimrc-intro
 
-##### 7.3 COMPLETION - Command line completion with CTRL-D and <TAB>
+#### 7.3 COMPLETION - Command line completion with CTRL-D and <TAB>
 
    (Make sure Vim is not in compatible mode:  :set nocp)
 
    When typing a  :  command, press CTRL-D to see possible completions.
    Press <TAB> to use one completion. 
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
