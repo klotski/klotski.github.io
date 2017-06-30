@@ -34,45 +34,40 @@ See also:
 
 To start Vim from the shell prompt type:  
 
-    ```
     vim FILENAME <ENTER>
-    ```
 
 #### 1.2: MOVING THE CURSOR
 
-  The cursor is moved using the hjkl keys.
+The cursor is moved using the hjkl keys.
 
-    ```
     h (left)	j (down)       k (up)	    l (right)
-    ```
 
-#### 1.3: TEXT EDITING - DELETION
+#### 1.3: TEXT EDITING
 
-   To delete the character at the cursor type:
+To delete the character at the cursor type:
 
-    ```
     x
-    ```
 
-#### 1.4: TEXT EDITING - INSERTION
+To insert text before the cursor type: 
 
-  To insert text type: 
-    ```
     i text <ESC>
-    ```
-   insert before the cursor.
 
-#### 1.5: TEXT EDITING - APPENDING
+To append text after the line type:
 
-  To append text type: A   type appended text   <ESC>         append after the line
+    A text <ESC>
 
 #### 1.6: EDITING A FILE OR EXITING VIM
 
-  type:	   <ESC>   :q!	 <ENTER>  to trash all changes.
-  type:	   <ESC>   :wq	 <ENTER>  to save the changes.
+To trash all changes and exit type:
 
-  NOTE: Pressing <ESC> will place you in Normal mode or will cancel
-        an unwanted and partially completed command.
+    <ESC> :q! <ENTER>
+
+To save the changes and exit type:
+
+    <ESC> :wq <ENTER>
+
+NOTE: Pressing <ESC> will place you in Normal mode or will cancel
+      an unwanted and partially completed command.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #### 2.1: DELETION COMMANDS
