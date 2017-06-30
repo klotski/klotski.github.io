@@ -4,21 +4,23 @@ title: Practical Vim
 category: Reading Notes
 ---
 
-## Configuration
+## TBC
+
+** Configuration **
 
 1. 为 vimrc 配置一些基本选项
 2. Tim Pope 的 rails.vim 插件
 3. Kana Natsuno 自定义文本对象
 4. 代码补全、编译及错误跳转
 
-## Questions
+** Questions **
 
 - CTRL+O vs CTRL+T
 - CTRL+] vs CTRL+I
 
-### 准备工作
+## 准备工作
 
-##### 使用 Vim 的出厂配置
+#### 使用 Vim 的出厂配置
 
 在 shell 中执行
 
@@ -35,19 +37,23 @@ category: Reading Notes
 
     vim -u fakepath/essential.vim
 
-##### Vim 脚本所扮演的角色
+#### Vim 脚本所扮演的角色
 
 Vim 脚本让我们可以给 Vim 添加新的功能，或是改变其已有的功能。
 
-##### 配置编译选项
+#### 配置编译选项
 
 有些 Vim 功能可以在编译期间被禁用。例如，在配置编译选项时，我们可以传入 --with-features=tiny 参数，这会禁用除最基本的功能外的其他所有功能（Vim 的功能集还包括 small、normal、big 和 huge）。可以查阅 `:h +feature-list`，浏览完整的功能列表。
 
-##### 查看 Vim 版本
+#### 查看 Vim 版本
 
 如果发现自己的 Vim 缺少本书所讨论的某个功能，那么你也许正在使用一个最小功能集的 Vim 发行版。你可以用 `:version` 命令检查此功能是否可用。
 
-### 第 1 章 Vim 解决问题的方式
+## 第 1 章 Vim 解决问题的方式
+
+学会规划按键动作，使得在重复时能完成一项有用的工作。
+
+理想的编辑模式：用一次按键移动，用另一次按键执行。
 
 |复合命令|等效长命令|功能|
 |--------|----------|------------------------------------------|
