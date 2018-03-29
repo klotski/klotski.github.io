@@ -1,109 +1,65 @@
 ---
 layout: default
 title: Red Hat Linux 用户基础
-category: Notes
+category: Notes, UNIX/Linux
 ---
-第1章 总览 
-　1.1 登录 
-　1.2 内核、程序和进程 
-　1.3 查看文件系统 
-　1.4 运行命令 
-　1.5 管理终端 
-　1.6 寻求帮助 
-第2章 文件系统基础 
-　2.1 文件系统导航 
-　2.2 重要目录 
-　2.3 文件管理 
-　2.4 目录管理 
-　2.5 文件名和文件名匹配 
-　2.6 检查文件 
-　2.7 文件编辑 
-第3章 用户和组 
-　3.1 Linux用户和/etc/passwd文件 
-　3.2 Linux组和/etc/group文件 
-　3.3 检查用户信息 
-　3.4 改变身份 
-第4章 文件所有者及权限 
-　4.1 常规文件所有者及权限 
-　4.2 改变文件权限：chmod命令 
-　4.3 使用chgrp命令和chown命令改变文件所有者 
-　4.4 目录所有者及权限 
-　4.5 chmod命令回顾：八进制计数法 
-　4.6 控制默认权限：umask 
-第5章 Linux文件系统 
-　5.1 文件详述 
-　5.2 硬链接（hard links）和软链接（soft links） 
-　5.3 目录与设备节点 
-　5.4 磁盘、文件系统与挂载 
-　5.5 使用locate和find命令查找文件 
-　5.6 文件压缩：gzip和bipz2 
-　5.7 文件归档：tar命令 
-第6章 Bash Shell 
-　6.1 Bash引言 
-　6.2 命令列表和脚本 
-　6.3 Bash变量 
-　6.4 命令行替换 
-　6.5 自定义Shell 
-　6.6 获得Shell脚本和Shell初始化 
-第7章 标准输入／输出和管道 
-　7.1 标准输入和标准输出 
-　7.2 标准错误 
-　7.3 管道 
-第8章 字符处理工具 
-　8.1 文本编码及字数统计 
-　8.2 搜索文本：grep 
-　8.3 正则表达式介绍 
-　8.4 排序命令：sort命令和uniq命令 
-　8.5 提取和组合文本：cut命令和paste命令 
-　8.6 追踪差异：diff命令 
-　8.7 文本转换：tr命令 
-　8.8 拼写检查：aspell命令 
-　8.9 格式化文本（fmt）和文件分割（split） 
-第9章 进程管理 
-　9.1 进程 
-　9.2 进程状态 
-　9.3 进程调度：优先级（nice）和更改优先级（renice） 
-　9.4 发送信号 
-　9.5 作业控制 
-　9.6 调度延迟的任务：at命令 
-　9.7 调度周期任务：cron 
-第10章 网络应用程序 
-　10.1 TCP/IP联网简介 
-　10.2 Linux打印 
-　10.3 管理打印文件 
-　10.4 电子邮件概述 
-　10.5 Evolution MUA 
-　10.6 网络诊断程序 
-　10.7 基于终端的网络和 FTP 客户端程序 
-　10.8 远程Shell命令 
-第11章 补充材料 
-　11.1 高级Shell脚本编程 
-　11.2 RPM软件包管理器 
-　11.3 使用YUM管理软件包 
-　11.4 图形环境简介
+
+所用系统：[RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux "Red Hat Enterprise Linux") 5
+
+配套光盘：Fedora 8.0
 
 ---
-本书所用系统版本为[RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux "Red Hat Enterprise Linux") 5
-[RHCE](https://www.redhat.com/en/services/certification/rhce "Red Hat Certified Engineer")
 
----
-[TOC]
-
----
 ## 第一章 总览
 
 ### 1.1 登录
 
-登录方式：
-- 虚拟控制台（Ctrl+Alt+F1 ~ F6）
-- 图形界面（Ctrl+Alt+F7）【X xerver】
-- 远程shell
+#### 虚拟控制台
 
-退出：exit
+开始会话：
 
-who     列出当前登录的用户及其登录方式
-:0      指的是X服务器本身；
-pts/0   指的是在X服务器中打开的和一个终端
+- 在 Linux 中，用户会话从登录开始
+- 如果运行了 X 服务器，可以使用图形界面登录
+- 可以从六个虚拟控制台中的任何一个登录
+- 如果系统支持的话，可以使用远程 Shell 登录
+
+结束会话：
+
+- exit
+
+终端切换：
+
+- Virtual Console/文本终端: Ctrl+Alt+F1 ~ F6
+- X Server/图形环境: Ctrl+Alt+F7
+
+虚拟控制台 vs. 图形环境
+
+- 图形环境对内存和硬件有更高要求
+- 调试系统时，图形环境可能不起作用，但虚拟控制台是在 Linux 内核中直接实现的，所以总是可用
+- 虚拟控制台迅速且有效
+- 图形界面会给系统管理带来复杂性
+
+#### X 图形环境
+
+- X 服务器是底层程序，为图形程序提供运行环境，并不直接与用户对话。
+- 在图形环境中，因为用户已经通过登录管理器 (Login Manager) 登录，所以打开终端时不需要再次登录。
+- 通过 exit 命令或单击终端右上角的“关闭窗口”按钮来关闭终端。
+- “注销”会关闭所有打开的窗口，并将图形环境恢复到登录屏幕，等待下一个用户。
+
+#### who 命令列出当前登录的用户及其登录方式
+
+- ttyx		指虚拟控制台x
+- :0		指的是X服务器本身；
+- pts/0		指的是在X服务器中打开的或通过远程连接的第一个终端 (伪终端)
+
+#### 通过网络登录一台机器
+
+- 用 ssh (Secure Shell) 工具登录远程机器 (如果远程机器的配置允许远程登录)
+- ssh elvis@nimbus.example.com
+- Windows 平台通过 PuTTY
+- 当用户在远程机器上运行 who 命令时，命令会报告用户登录的机器，如 station.redhat.com
+
+
 
 ### 1.2 内核、程序和进程
 
@@ -222,6 +178,79 @@ fc              打开默认编辑器（vi）把之前键入的命令作为文�
 ### 6.2 
 
 ---
+
+第2章 文件系统基础 
+　2.1 文件系统导航 
+　2.2 重要目录 
+　2.3 文件管理 
+　2.4 目录管理 
+　2.5 文件名和文件名匹配 
+　2.6 检查文件 
+　2.7 文件编辑 
+第3章 用户和组 
+　3.1 Linux用户和/etc/passwd文件 
+　3.2 Linux组和/etc/group文件 
+　3.3 检查用户信息 
+　3.4 改变身份 
+第4章 文件所有者及权限 
+　4.1 常规文件所有者及权限 
+　4.2 改变文件权限：chmod命令 
+　4.3 使用chgrp命令和chown命令改变文件所有者 
+　4.4 目录所有者及权限 
+　4.5 chmod命令回顾：八进制计数法 
+　4.6 控制默认权限：umask 
+第5章 Linux文件系统 
+　5.1 文件详述 
+　5.2 硬链接（hard links）和软链接（soft links） 
+　5.3 目录与设备节点 
+　5.4 磁盘、文件系统与挂载 
+　5.5 使用locate和find命令查找文件 
+　5.6 文件压缩：gzip和bipz2 
+　5.7 文件归档：tar命令 
+第6章 Bash Shell 
+　6.1 Bash引言 
+　6.2 命令列表和脚本 
+　6.3 Bash变量 
+　6.4 命令行替换 
+　6.5 自定义Shell 
+　6.6 获得Shell脚本和Shell初始化 
+第7章 标准输入／输出和管道 
+　7.1 标准输入和标准输出 
+　7.2 标准错误 
+　7.3 管道 
+第8章 字符处理工具 
+　8.1 文本编码及字数统计 
+　8.2 搜索文本：grep 
+　8.3 正则表达式介绍 
+　8.4 排序命令：sort命令和uniq命令 
+　8.5 提取和组合文本：cut命令和paste命令 
+　8.6 追踪差异：diff命令 
+　8.7 文本转换：tr命令 
+　8.8 拼写检查：aspell命令 
+　8.9 格式化文本（fmt）和文件分割（split） 
+第9章 进程管理 
+　9.1 进程 
+　9.2 进程状态 
+　9.3 进程调度：优先级（nice）和更改优先级（renice） 
+　9.4 发送信号 
+　9.5 作业控制 
+　9.6 调度延迟的任务：at命令 
+　9.7 调度周期任务：cron 
+第10章 网络应用程序 
+　10.1 TCP/IP联网简介 
+　10.2 Linux打印 
+　10.3 管理打印文件 
+　10.4 电子邮件概述 
+　10.5 Evolution MUA 
+　10.6 网络诊断程序 
+　10.7 基于终端的网络和 FTP 客户端程序 
+　10.8 远程Shell命令 
+第11章 补充材料 
+　11.1 高级Shell脚本编程 
+　11.2 RPM软件包管理器 
+　11.3 使用YUM管理软件包 
+　11.4 图形环境简介
+---
 userid 用户ID
 virtual console 虚拟控制台
 Login Manager 登录管理器
@@ -256,4 +285,6 @@ Module      模块
 
 
 
+See also:
 
+- [RHCE](https://www.redhat.com/en/services/certification/rhce "Red Hat Certified Engineer")

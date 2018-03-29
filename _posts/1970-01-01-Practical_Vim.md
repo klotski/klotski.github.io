@@ -15,12 +15,12 @@ category: Reading Notes
 
 **Questions**
 
-- CTRL+O vs CTRL+T
-- CTRL+] vs CTRL+I
+- `CTRL+O` vs `CTRL+T`
+- `CTRL+]` vs `CTRL+I`
 
 ## Terms
 
-宏 (macro): In computing, a macro is a shortened version of a computer command which makes the computer carry out a set of actions.
+macro - In computing, a macro is a shortened version of a computer command which makes the computer carry out a set of actions.
 
 ## Here We Go
 

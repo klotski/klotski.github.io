@@ -31,6 +31,19 @@ If you want make these commands more permanent then these commands could be adde
 
 ### Clear bash history completely
 
+Set HISTSIZE to 0 (zero) (It works for CentOS 6.9 but not for CentOS 7.3)
+
+```sh
+HISTSIZE=0
+exit
+```
+Set HISTFILESIZE to 0 (zero)
+
+```sh
+HISTFILESIZE=0
+exit
+```
+
 Remove *~./bash_history* file, then clear current history and exit
 
 ```sh
